@@ -1,0 +1,24 @@
+{
+  "name": "newT pet",
+  "version": "1.0",
+  "description": "A pet in your new tab.",
+  "manifest_version": 2,
+  "content_scripts": [{
+   "js": ["jquery.min.js", "main.js"],
+   "matches": ["http://*/*", "https://*/*"]
+  }],
+  "permissions": ["storage", "tabs"],
+  "icons": {
+     "16": "assets/corgi.png",
+     "48": "assets/corgi.png",
+     "128": "assets/corgi.png"
+ },
+ "browser_action": {
+     "default_icon": "assets/corgi.png",
+     "default_popup": "popup.html"
+ },
+  "chrome_url_overrides" : {
+      "newtab": "newtpet.html"
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}
