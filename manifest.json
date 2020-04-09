@@ -9,12 +9,12 @@
   }],
   "permissions": ["storage", "tabs"],
   "icons": {
-     "16": "assets/corgi.png",
-     "48": "assets/corgi.png",
-     "128": "assets/corgi.png"
+     "16": "assets/images/corgi.png",
+     "48": "assets/images/corgi.png",
+     "128": "assets/images/corgi.png"
  },
  "browser_action": {
-     "default_icon": "assets/corgi.png",
+     "default_icon": "assets/images/corgi.png",
      "default_popup": "popup.html"
  },
   "chrome_url_overrides" : {
