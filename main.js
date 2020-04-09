@@ -2,7 +2,7 @@ function addCoins() {
   let currentCoins = localStorage.getItem('coins');
   currentCoins++;
   localStorage.setItem('coins', currentCoins);
-  $('#coins').html(`<img src="assets/coin.gif"/> ${currentCoins}`);
+  $('#coins').html(`<img src="assets/images/coin.gif"/> ${currentCoins}`);
 }
 
 $("#coins").on('click', function() {
@@ -135,7 +135,7 @@ method: 'get'
       localStorage.setItem('temp', msgs.current_observation.temp_f);
       localStorage.setItem('forecast', msgs.current_observation.forecast_url);
   }).then(function(){
-      let html = `<strong>Current City:</strong> ${localStorage.getItem('city')}, ${localStorage.getItem('state')} <img src="assets/cog.png" id="change-location"/> <br> <strong>Temp:</strong> ${localStorage.getItem('temp')} °F <br> <strong>Weather:</strong> ${localStorage.getItem('weather')}<br><a href="${localStorage.getItem('forecast')}" target="new">View forecast on <img src="assets/wunderground.jpg"/></a>`;
+      let html = `<strong>Current City:</strong> ${localStorage.getItem('city')}, ${localStorage.getItem('state')} <img src="assets/images/cog.png" id="change-location"/> <br> <strong>Temp:</strong> ${localStorage.getItem('temp')} °F <br> <strong>Weather:</strong> ${localStorage.getItem('weather')}<br><a href="${localStorage.getItem('forecast')}" target="new">View forecast on <img src="assets/images/wunderground.jpg"/></a>`;
       $('#weather').html(html);
   }).then(function() {
       changeWeather();
@@ -232,18 +232,18 @@ function changeWeather() {
 $(".bodyPage").mousemove(function(e) {
   let screenMid = Math.floor(window.innerWidth/2);
   if (e.pageX < screenMid) {
-      // $('#pet').html('<img src="assets/dog_left.gif"/>');
-      // $('#pet').html('<img src="assets/cat_right.gif"/>');
+      // $('#pet').html('<img src="assets/images/dog_left.gif"/>');
+      // $('#pet').html('<img src="assets/images/cat_right.gif"/>');
       $('#pet').css('transform', 'scaleX(1)');
   } else {
-      // $('#pet').html('<img src="assets/dog_right.gif"/>');
+      // $('#pet').html('<img src="assets/images/dog_right.gif"/>');
       $('#pet').css('transform', 'scaleX(-1)');
   }
 });
 
 $("#pet").on('click', 'img', function(e) {
   let audio = document.createElement("audio");
-  audio.setAttribute('src','assets/woof.wav');
+  audio.setAttribute('src','assets/sounds/woof.wav');
   audio.play();
   $('#pet img').css('transform', 'translateY(-50px)');
   setTimeout(function(){
@@ -305,7 +305,7 @@ $(document).on('ready', () => {
   if (!localStorage.getItem('state')) {localStorage.setItem('state', '')};
   if (!localStorage.getItem('hunger')) {localStorage.setItem('hunger', '0')};
   if (!localStorage.getItem('coins')) {localStorage.setItem('coins', '0')};
-  $('#coins').html(`<img src="assets/coin.gif"/> ${localStorage.getItem('coins')}`);
+  $('#coins').html(`<img src="assets/images/coin.gif"/> ${localStorage.getItem('coins')}`);
   $('#hunger-meter').css('width', localStorage.getItem('hunger'));
   setInterval(addCoins,500);
   setInterval(getHungry, 15000);
