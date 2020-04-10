@@ -1,0 +1,363 @@
+.bodyPage {
+  margin: 0;
+  overflow: hidden;
+  /* cursor: url('assets/bone.png'), auto; */
+}
+
+a {
+  text-decoration: none;
+  margin-top: 5px;
+  color: black;
+}
+
+a:hover {
+  cursor: hand;
+  color: black;
+  text-decoration: underline;
+}
+
+#instructions {
+  width: 300px;
+  height: 440px;
+  padding: 10px 20px;
+}
+
+#loading {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  background: white;
+  width: 100%;
+  height: 100%;
+}
+
+#loading img {
+  margin: 10em auto;
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.spacer {
+  clear: both;
+}
+
+#pet {
+  display: block;
+  position: relative;
+  margin: auto;
+  width: 300px;
+}
+
+#pet img {
+  max-width: 100%;
+}
+
+#container {
+  width: 100%;
+}
+
+#weather-box {
+  width: 275px;
+  float: left;
+}
+
+#stats-box {
+  float: right;
+  margin-top: 15px;
+  padding-right: 15px;
+  z-index: 8;
+}
+
+#coins {
+  margin-bottom: 5px;
+}
+
+#coins img {
+  width: 20px;
+  position: relative;
+  top: 5px;
+}
+
+#hunger {
+  width: 100;
+  height: 10;
+  border: 1px solid black;
+  background: white;
+}
+
+#food-menu {
+  width: 75px;
+  margin: 10px auto;
+}
+
+#bone {
+  float: left;
+}
+
+#steak {
+  float: right;
+  margin-left: 10px;
+}
+
+#hunger-meter {
+  width: 0;
+  height: 10;
+  display: inline-block;
+  background: black;
+}
+
+#fallingbone {
+  background-image: url("assets/bone.gif");
+  background-size: 100%;
+  position: absolute;
+  top: 0;
+  /* left: 400; */
+  width: 50px;
+  height: 38px;
+  background-repeat: no-repeat;
+  z-index: 10;
+}
+
+#fallingsteak {
+  background-image: url("assets/steak.gif");
+  background-size: 100%;
+  position: absolute;
+  top: 0;
+  /* left: 600; */
+  width: 75px;
+  height: 52px;
+  background-repeat: no-repeat;
+  z-index: 10;
+}
+
+#weather {
+  background: rgba(255, 255, 255, 0.899);
+  /* border: 1px solid grey; */
+  border-radius: 5px;
+  margin: 10px;
+  font-size: 12px;
+  padding: 10px;
+  max-width: 225px;
+}
+
+img#change-location {
+  width: 16px;
+  position: relative;
+  top: 3px;
+}
+
+#update-weather {
+  margin-top: 15px;
+  margin-left: 15px;
+  text-align: left;
+  width: 100%;
+}
+
+#city {
+  width: 70px;
+  display: inline;
+}
+
+#state {
+  width: 70px;
+  display: inline;
+}
+
+.clearDay {
+  background-image: url('assets/sunny.png');
+  background-size: 100%;    
+  width: 100%;
+  height:100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index:1;
+  /* animation: snow 20s linear infinite; */
+}
+
+.clearNight {
+  background-image: url('assets/clear.gif');
+  width: 100%;
+  height:100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index:1;
+  /* animation: snow 20s linear infinite; */
+}
+
+.cloudyDay {
+  background-image: url('assets/cloudy.gif');
+  background-size: 50%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  animation: snow 50s linear infinite;
+}
+
+.cloudyNight {
+  background-image: url('assets/cloudyNight.jpg');
+  background-size: 100%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  /* animation: snow 50s linear infinite; */
+}
+
+.hazeDay {
+  background-image: url('assets/hazeDay.jpg');
+  background-size: 100%;
+  width: 100%;
+  height:100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index:1;
+  /* animation: snow 20s linear infinite; */
+}
+
+.hazeNight {
+  background-image: url('assets/hazeNight.gif');
+  background-size: 100%;
+  width: 100%;
+  height:100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index:1;
+  /* animation: snow 20s linear infinite; */
+}
+
+.overcastDay {
+  background-image: url('assets/overcastDay.jpg');
+  background-size: 100%;
+  width: 100%;
+  height:100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index:1;
+  /* animation: snow 50s linear infinite; */
+}
+
+.overcastNight {
+  background-image: url('assets/overcast2.gif');
+  width: 100%;
+  height:100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index:1;
+  animation: snow 50s linear infinite;
+}
+
+.rainDay {
+  background-image: url('assets/rain.gif');
+  width: 100%;
+  height:100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index:1;
+  animation: snow 20s linear infinite;
+}
+
+.rainNight {
+  background-image: url('assets/rainNighttime.gif');
+  background-size: 100%;
+  width: 100%;
+  height:100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index:1;
+  /* animation: snow 20s linear infinite; */
+}
+
+.snowDay {
+  background-image: url('assets/snowflakes.gif');
+  width: 100%;
+  height:100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index:1;
+  animation: snow 20s linear infinite;
+}
+
+.snowNight {
+  background-image: url('assets/snowNight.gif');
+  width: 100%;
+  height:100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index:1;
+  animation: snow 20s linear infinite;
+}
+
+.sunnyDay {
+  background-image: url('assets/sunny.png');
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position-y: 0;
+  background-position-x: 100%;
+  width: 100%;
+  height:100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index:1;
+  /* animation: snow 20s linear infinite; */
+}
+
+.sunnyNight {
+  background-image: url('assets/sunny.png');
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position-y: 0;
+  background-position-x: 100%;
+  width: 100%;
+  height:100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index:1;
+  /* animation: snow 20s linear infinite; */
+}
+
+
+@keyframes snow {
+  from {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  to {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}
+
+
+@keyframes fish {
+  0% {transform: translateY(0px);}
+  25% {transform: translateY(20px);}
+  50% {transform: translateY(0px);}
+  75% {transform: translateY(-20px);}
+  100% {transform: translateY(0px);}
+}
+
+#water {
+  background: rgba(202,241,254,1);
+  height: 100%;
+  position: relative;
+  top: -110px;
+  z-index: -1;
+}
