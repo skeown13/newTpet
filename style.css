@@ -1,7 +1,7 @@
 .bodyPage {
   margin: 0;
   overflow: hidden;
-  /* cursor: url('assets/bone.png'), auto; */
+  /* cursor: url('assets/images/bone.png'), auto; */
 }
 
 a {
@@ -114,7 +114,7 @@ a:hover {
 }
 
 #fallingbone {
-  background-image: url("assets/bone.gif");
+  background-image: url("assets/images/bone.gif");
   background-size: 100%;
   position: absolute;
   top: 0;
@@ -126,7 +126,7 @@ a:hover {
 }
 
 #fallingsteak {
-  background-image: url("assets/steak.gif");
+  background-image: url("assets/images/steak.gif");
   background-size: 100%;
   position: absolute;
   top: 0;
@@ -171,7 +171,7 @@ img#change-location {
 }
 
 .clearDay {
-  background-image: url('assets/sunny.png');
+  background-image: url('assets/images/sunny.png');
   background-size: 100%;    
   width: 100%;
   height:100%;
@@ -183,7 +183,7 @@ img#change-location {
 }
 
 .clearNight {
-  background-image: url('assets/clear.gif');
+  background-image: url('assets/images/clear.gif');
   width: 100%;
   height:100%;
   position: absolute;
@@ -194,7 +194,7 @@ img#change-location {
 }
 
 .cloudyDay {
-  background-image: url('assets/cloudy.gif');
+  background-image: url('assets/images/cloudy.gif');
   background-size: 50%;
   width: 100%;
   height: 100%;
@@ -206,7 +206,7 @@ img#change-location {
 }
 
 .cloudyNight {
-  background-image: url('assets/cloudyNight.jpg');
+  background-image: url('assets/images/cloudyNight.jpg');
   background-size: 100%;
   width: 100%;
   height: 100%;
@@ -218,7 +218,7 @@ img#change-location {
 }
 
 .hazeDay {
-  background-image: url('assets/hazeDay.jpg');
+  background-image: url('assets/images/hazeDay.jpg');
   background-size: 100%;
   width: 100%;
   height:100%;
@@ -230,7 +230,7 @@ img#change-location {
 }
 
 .hazeNight {
-  background-image: url('assets/hazeNight.gif');
+  background-image: url('assets/images/hazeNight.gif');
   background-size: 100%;
   width: 100%;
   height:100%;
@@ -242,7 +242,7 @@ img#change-location {
 }
 
 .overcastDay {
-  background-image: url('assets/overcastDay.jpg');
+  background-image: url('assets/images/overcastDay.jpg');
   background-size: 100%;
   width: 100%;
   height:100%;
@@ -254,7 +254,7 @@ img#change-location {
 }
 
 .overcastNight {
-  background-image: url('assets/overcast2.gif');
+  background-image: url('assets/images/overcast2.gif');
   width: 100%;
   height:100%;
   position: absolute;
@@ -265,7 +265,7 @@ img#change-location {
 }
 
 .rainDay {
-  background-image: url('assets/rain.gif');
+  background-image: url('assets/images/rain.gif');
   width: 100%;
   height:100%;
   position: absolute;
@@ -276,7 +276,7 @@ img#change-location {
 }
 
 .rainNight {
-  background-image: url('assets/rainNighttime.gif');
+  background-image: url('/images/rainNighttime.gif');
   background-size: 100%;
   width: 100%;
   height:100%;
@@ -288,7 +288,7 @@ img#change-location {
 }
 
 .snowDay {
-  background-image: url('assets/snowflakes.gif');
+  background-image: url('assets/images/snowflakes.gif');
   width: 100%;
   height:100%;
   position: absolute;
@@ -299,7 +299,7 @@ img#change-location {
 }
 
 .snowNight {
-  background-image: url('assets/snowNight.gif');
+  background-image: url('assets/images/snowNight.gif');
   width: 100%;
   height:100%;
   position: absolute;
@@ -310,7 +310,7 @@ img#change-location {
 }
 
 .sunnyDay {
-  background-image: url('assets/sunny.png');
+  background-image: url('assets/images/sunny.png');
   background-size: 70%;
   background-repeat: no-repeat;
   background-position-y: 0;
@@ -325,7 +325,7 @@ img#change-location {
 }
 
 .sunnyNight {
-  background-image: url('assets/sunny.png');
+  background-image: url('assets/images/sunny.png');
   background-size: 70%;
   background-repeat: no-repeat;
   background-position-y: 0;
