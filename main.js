@@ -133,9 +133,9 @@ method: 'get'
   }).then(function(response) {
       return response.json();
   }).then(function(msgs) {
-      localStorage.setItem('weather', msgs.current_observation.weather);
-      localStorage.setItem('temp', msgs.current_observation.temp_f);
-      localStorage.setItem('forecast', msgs.current_observation.forecast_url);
+      localStorage.setItem('weather', msgs.data[0].weather.description);
+      localStorage.setItem('temp', msgs.data[0].temp);
+      // localStorage.setItem('forecast', msgs.current_observation.forecast_url);
   }).then(function(){
       let html = `<strong>Current City:</strong> ${localStorage.getItem('city')}, ${localStorage.getItem('state')} <img src="assets/images/cog.png" id="change-location"/> <br> <strong>Temp:</strong> ${localStorage.getItem('temp')} °F <br> <strong>Weather:</strong> ${localStorage.getItem('weather')}<br><a href="https://www.weatherbit.io" target="new">Provided by Weatherbit.io <img src="assets/images/weatherbit.png"/></a>`;
       $('#weather').html(html);
