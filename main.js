@@ -111,6 +111,8 @@ function checkCollision(foodItem) {
 
 // ---------------------WEATHER---------------------------------
 
+let myKey = config.WEATHERBIT_KEY;
+
 $("#weather-box").on('click', '#change-location', function(e) {
   // console.log('change');
   $('#update-weather').toggleClass('invisible');
@@ -125,7 +127,7 @@ $("#update").on('mouseup', function(e) {
 });
 
 function updateFromRemote() {
-  let url = `http://api.wunderground.com/api/647cab7e22bd323e/geolookup/conditions/q/${localStorage.getItem('state')}/${localStorage.getItem('city').replace(/' '/g,'_')}.json`
+  let url = `https://api.weatherbit.io/v2.0/current?city=${localStorage.getItem('city')},${localStorage.getItem('state').replace(/' '/g,'_')}&key=${myKey}&unit=I`
   fetch(url, {
 method: 'get'
   }).then(function(response) {
@@ -135,7 +137,7 @@ method: 'get'
       localStorage.setItem('temp', msgs.current_observation.temp_f);
       localStorage.setItem('forecast', msgs.current_observation.forecast_url);
   }).then(function(){
-      let html = `<strong>Current City:</strong> ${localStorage.getItem('city')}, ${localStorage.getItem('state')} <img src="assets/images/cog.png" id="change-location"/> <br> <strong>Temp:</strong> ${localStorage.getItem('temp')} °F <br> <strong>Weather:</strong> ${localStorage.getItem('weather')}<br><a href="${localStorage.getItem('forecast')}" target="new">View forecast on <img src="assets/images/wunderground.jpg"/></a>`;
+      let html = `<strong>Current City:</strong> ${localStorage.getItem('city')}, ${localStorage.getItem('state')} <img src="assets/images/cog.png" id="change-location"/> <br> <strong>Temp:</strong> ${localStorage.getItem('temp')} °F <br> <strong>Weather:</strong> ${localStorage.getItem('weather')}<br><a href="https://www.weatherbit.io" target="new">Provided by Weatherbit.io <img src="assets/images/weatherbit.png"/></a>`;
       $('#weather').html(html);
   }).then(function() {
       changeWeather();
