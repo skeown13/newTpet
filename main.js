@@ -127,7 +127,7 @@ $("#update").on('mouseup', function(e) {
 });
 
 function updateFromRemote() {
-  let url = `https://api.weatherbit.io/v2.0/current?city=${localStorage.getItem('city')},${localStorage.getItem('state').replace(/' '/g,'_')}&key=${myKey}&unit=I`
+  let url = `https://api.weatherbit.io/v2.0/current?city=${localStorage.getItem('city')},${localStorage.getItem('state').replace(/' '/g,'_')}&key=${myKey}&units=I`
   fetch(url, {
 method: 'get'
   }).then(function(response) {
@@ -154,74 +154,54 @@ method: 'get'
 function changeWeather() {
   let currentTime = new Date();
   let currentHour = currentTime.getHours();
-  let weatherTypes = 'rainDay snowDay cloudyDay clearDay sunnyDay overcastDay hazeDay rainNight snowNight cloudyNight clearNight sunnyNight overcastNight hazeNight';
+  let weatherTypes = 'rainDay snowDay cloudyDay clearDay overcastDay hazeDay rainNight snowNight cloudyNight clearNight overcastNight hazeNight';
   $('#coins').css('color','#000000');
   $('#hunger').css('border', '1px solid black');
   $('#hunger-meter').css('background','black');
   $('#stats-box').css('color','black');
   if (currentHour > 6 && currentHour < 20) {
-      if (localStorage.getItem('weather').includes('Overcast')) {
-          $("#container").removeClass(weatherTypes);
-          $("#container").addClass('overcastDay');
-          $('#coins').css('color','#EEEEEE');
-          $('#hunger').css('border', '1px solid #EEEEEE');
-          // $('#hunger-meter').css('background','#EEEEEE');
-          $('#stats-box').css('color','#EEEEEE');
-      } else if (localStorage.getItem('weather').includes('Cloud')) {
+      if (/cloud/.test(localStorage.getItem('weather'))) {
           $("#container").removeClass(weatherTypes);
           $("#container").addClass('cloudyDay');
-      } else if (localStorage.getItem('weather').includes('Rain')) {
+      } else if (/[Rr]ain/.test(localStorage.getItem('weather'))) {
           $("#container").removeClass(weatherTypes);
           $("#container").addClass('rainDay');
-      } else if (localStorage.getItem('weather').includes('Sun')) {
-          $("#container").removeClass(weatherTypes);
-          $("#container").addClass('sunnyDay');
-      } else if (localStorage.getItem('weather').includes('Clear')) {
+      } else if (/Clear/.test(localStorage.getItem('weather'))) {
           $("#container").removeClass(weatherTypes);
           $("#container").addClass('clearDay');
           // $('#coins').css('color','#EEEEEE');
           $('#hunger').css('border', '1px solid #EEEEEE');
           // $('#hunger-meter').css('background','#EEEEEE');
           // $('#stats-box').css('color','#EEEEEE');
-      } else if (localStorage.getItem('weather').includes('Snow')) {
+      } else if (/[Ss]now/.test(localStorage.getItem('weather'))) {
           $("#container").removeClass(weatherTypes);
           $("#container").addClass('snowDay');
-      } else if (localStorage.getItem('weather').includes('Haze')) {
+      } else if (/Haze/.test(localStorage.getItem('weather'))) {
           $("#container").removeClass(weatherTypes);
           $("#container").addClass('hazeDay');
       }
   } else {
-      if (localStorage.getItem('weather').includes('Overcast')) {
-          $("#container").removeClass(weatherTypes);
-          $("#container").addClass('overcastNight');
-          $('#coins').css('color','#EEEEEE');
-          $('#hunger').css('border', '1px solid #EEEEEE');
-          // $('#hunger-meter').css('background','#EEEEEE');
-          $('#stats-box').css('color','#EEEEEE');
-      } else if (localStorage.getItem('weather').includes('Cloud')) {
+      if (/cloud/.test(localStorage.getItem('weather'))) {
           $("#container").removeClass(weatherTypes);
           $("#container").addClass('cloudyNight');
           $('#coins').css('color','#EEEEEE');
           $('#hunger').css('border', '1px solid #EEEEEE');
           // $('#hunger-meter').css('background','#EEEEEE');
           $('#stats-box').css('color','#EEEEEE');
-      } else if (localStorage.getItem('weather').includes('Rain')) {
+      } else if (/[Rr]ain/.test(localStorage.getItem('weather'))) {
           $("#container").removeClass(weatherTypes);
           $("#container").addClass('rainNight');
-      } else if (localStorage.getItem('weather').includes('Sun')) {
-          $("#container").removeClass(weatherTypes);
-          $("#container").addClass('sunnyNight');
-      } else if (localStorage.getItem('weather').includes('Clear')) {
+      } else if (/Clear/.test(localStorage.getItem('weather'))) {
           $("#container").removeClass(weatherTypes);
           $("#container").addClass('clearNight');
           $('#coins').css('color','#EEEEEE');
           $('#hunger').css('border', '1px solid #EEEEEE');
           // $('#hunger-meter').css('background','#EEEEEE');
           $('#stats-box').css('color','#EEEEEE');
-      } else if (localStorage.getItem('weather').includes('Snow')) {
+      } else if (/[Ss]now/.test(localStorage.getItem('weather'))) {
           $("#container").removeClass(weatherTypes);
           $("#container").addClass('snowNight');
-      } else if (localStorage.getItem('weather').includes('Haze')) {
+      } else if (/Haze/.test(localStorage.getItem('weather'))) {
           $("#container").removeClass(weatherTypes);
           $("#container").addClass('hazeDay');
       }
