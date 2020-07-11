@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/skeown13/newTpet/issues"
   },
-  "homepage": "https://github.com/skeown13/newTpet#readme"
+  "homepage": "https://github.com/skeown13/newTpet#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0"
+  }
 }
