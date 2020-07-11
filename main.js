@@ -1,3 +1,5 @@
+import { weatherApi } from './config.js'
+
 function addCoins() {
   let currentCoins = localStorage.getItem('coins');
   currentCoins++;
@@ -111,7 +113,6 @@ function checkCollision(foodItem) {
 
 // ---------------------WEATHER---------------------------------
 
-let myKey = config.WEATHERBIT_KEY;
 
 $("#weather-box").on('click', '#change-location', function(e) {
   // console.log('change');
@@ -127,7 +128,7 @@ $("#update").on('mouseup', function(e) {
 });
 
 function updateFromRemote() {
-  let url = `https://api.weatherbit.io/v2.0/current?city=${localStorage.getItem('city')},${localStorage.getItem('state').replace(/' '/g,'_')}&key=${myKey}&units=I`
+  let url = `https://api.weatherbit.io/v2.0/current?city=${localStorage.getItem('city')},${localStorage.getItem('state').replace(/' '/g,'_')}&key=${weatherApi}&units=I`
   fetch(url, {
 method: 'get'
   }).then(function(response) {
