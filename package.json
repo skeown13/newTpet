@@ -1,0 +1,19 @@
+{
+  "name": "newtpet",
+  "version": "1.0.0",
+  "description": "A Google Chrome New Tab Extension that has an interactive pet and gives the current weather conditions.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skeown13/newTpet.git"
+  },
+  "author": "skeown13",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/skeown13/newTpet/issues"
+  },
+  "homepage": "https://github.com/skeown13/newTpet#readme"
+}
