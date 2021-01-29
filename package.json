@@ -18,5 +18,6 @@
   "homepage": "https://github.com/skeown13/newTpet#readme",
   "dependencies": {
     "dotenv": "^8.2.0"
-  }
+  },
+  "type": "module"
 }
